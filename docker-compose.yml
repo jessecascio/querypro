@@ -1,0 +1,12 @@
+data:
+    image: jessecascio/querypro-data
+    env_file:
+        - ./passwords.env
+    expose:
+        - "8083"
+        - "8086"
+        - "4444"
+    ports:
+        - "8083:8083"
+        - "8086:8086"
+        - "4444:4444/udp"
