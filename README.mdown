@@ -9,18 +9,36 @@ Usage
 Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
 Install the latest version od [Docker Compose](https://docs.docker.com/compose/install/)
 
-Set desired default credentials in ```passwords.env```
+Set desired default configurations in ```config.env```
+
+Set credentials for UI
 ```
-INFLUX_USER=querypro
-INFLUX_PASS=querypro
+LOGIN_USER=querypro
+LOGIN_PASS=querypro
 ```
 
-Start the QueryPro container
+Set credentials for database
+```
+DATA_USER=querypro
+DATA_PASS=querypro
+```
+
+Set timezone for time series grouping
+```
+TIMEZONE=PST
+```
+
+Start the QueryPro container in the background
 ```
 sudo docker-compose up -d
 ```
 
-Verify access via the browser
+Verify access via curl
+```
+curl -I 127.0.0.1:8083
+```
+
+Or via the browser
 ```
 localhost:8083
 ```

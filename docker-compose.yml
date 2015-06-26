@@ -1,7 +1,7 @@
 data:
     image: jessecascio/querypro-data
     env_file:
-        - ./passwords.env
+        - ./config.env
     expose:
         - "8083"
         - "8086"
