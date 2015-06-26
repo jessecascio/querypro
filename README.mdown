@@ -8,7 +8,7 @@ Usage
 
 Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
 
-Install the latest version od [Docker Compose](https://docs.docker.com/compose/install/)
+Install the latest version of [Docker Compose](https://docs.docker.com/compose/install/)
 
 Set desired default configurations in ```config.env```
 
