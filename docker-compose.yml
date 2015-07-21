@@ -1,4 +1,10 @@
-data:
+mongo:
+    image: mongo
+    expose:
+        - "27017"
+    ports:
+        - "27017:27017"
+queryprodata:
     image: jessecascio/querypro-data
     env_file:
         - ./data-config.env
@@ -10,3 +16,14 @@ data:
         - "8083:8083"
         - "8086:8086"
         - "4444:4444/udp"
+        - "25826:25826/udp"
+queryprofrontend:
+    image: jessecascio/querypro-frontend
+    expose:
+        - "80"
+    ports:
+        - "80:80"
+queryprobackend:
+    image: jessecascio/querypro-backend
+    links:
+        - mongo
