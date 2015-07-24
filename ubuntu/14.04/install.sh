@@ -2,16 +2,21 @@
 
 set -m
 
-# DO NOT USE THIS YET (6/26/2015)
+# DO NOT USE THIS YET (7/24/2015)
 
 apt-get autoclean 
 apt-get update
-apt-get install -y ufw
+apt-get install -y ufw git
 
 wget -qO- https://get.docker.com/ | sh
 service docker start
 
-docker-compose up -d
+curl -L https://github.com/docker/compose/releases/download/1.3.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+
+# clone repo
+cd /opt && git clone https://github.com/jessecascio/querypro.git
+cd /opt/querypro && docker-compose up -d
 
 ufw enable
 ufw default deny incoming
