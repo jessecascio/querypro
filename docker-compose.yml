@@ -1,9 +1,3 @@
-mongo:
-    image: mongo
-    expose:
-        - "27017"
-    ports:
-        - "27017:27017"
 queryprodata:
     image: jessecascio/querypro-data
     env_file:
@@ -12,6 +6,7 @@ queryprodata:
         - "8083"
         - "8086"
         - "4444"
+        - "25826"
     ports:
         - "8083:8083"
         - "8086:8086"
@@ -25,5 +20,8 @@ queryprofrontend:
         - "80:80"
 queryprobackend:
     image: jessecascio/querypro-backend
+    expose:
+        - "8080"
+        - "8080:8080"
     links:
-        - mongo
+        - queryprodata
