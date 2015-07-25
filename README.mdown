@@ -14,8 +14,8 @@ Set desired default configurations in ```config.env```
 
 Set credentials for UI
 ```
-LOGIN_USER=querypro
-LOGIN_PASS=querypro
+USER=querypro
+PASSWORD=querypro
 ```
 
 Set credentials for database
@@ -29,17 +29,12 @@ Set timezone for time series grouping
 TIMEZONE=PST
 ```
 
-Start the QueryPro container in the background
+Start the QueryPro containers as daemons
 ```
 sudo docker-compose up -d
 ```
 
-Verify access via curl
+Verify access via browser
 ```
-curl -I 127.0.0.1:8083
-```
-
-Or via the browser
-```
-localhost:8083
+&lt;server-ip&gt;:8083
 ```
