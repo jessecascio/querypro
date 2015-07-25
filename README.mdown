@@ -22,7 +22,7 @@ Once installation is complete all the Docker containers will be up and running a
 sudo docker ps
 ```
 
-### To install manually simply:
+##### To install manually simply:
 
 Update the OS i.e. ```sudo apt-get update```
 Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
@@ -68,4 +68,6 @@ Finally, as a security measure, update firewall settings to only allow access to
 Usage
 ------
 
-Once the 
+Once the QueryPro has been installed it can be accessed via the IP address of the server is was installed on.  To accesss the UI, pull up the IP in the browser.
+
+To
