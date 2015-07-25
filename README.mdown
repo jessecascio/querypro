@@ -72,6 +72,6 @@ Once the QueryPro has been installed it can be accessed via the IP address of th
 
 Communication with QueryPro if done via UDP on port 4444 and can be done via one of the libraries
 
-..* [querypro-php](https://github.com/jessecascio/querypro-php) QueryPro PHP Library
-..* [querypro-nodejs](#) QueryPro NodeJS Library (Coming Soon)
-..* [querypro-java](#) QueryPro Java Library (Coming Soon)
+* [querypro-php](https://github.com/jessecascio/querypro-php) QueryPro PHP Library
+* [querypro-nodejs](#) QueryPro NodeJS Library (Coming Soon)
+* [querypro-java](#) QueryPro Java Library (Coming Soon)
