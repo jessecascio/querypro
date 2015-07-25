@@ -22,7 +22,7 @@ Once installation is complete all the Docker containers will be up and running a
 sudo docker ps
 ```
 
-To install manually simply:
+### To install manually simply:
 
 Update the OS i.e. ```sudo apt-get update```
 Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
