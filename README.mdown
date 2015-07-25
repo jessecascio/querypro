@@ -34,7 +34,7 @@ Start the QueryPro containers as daemons
 sudo docker-compose up -d
 ```
 
-Verify access via browser
+Access UI via browser with servier IP
 ```
-&lt;server-ip&gt;:8083
+XXX.XXX.XXX.XXX
 ```
