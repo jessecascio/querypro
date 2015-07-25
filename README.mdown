@@ -3,14 +3,38 @@ QueryPro
 
 [QueryPro](http://jessesnet.com/portfolio) is a multi tiered system for gathering and analyzing various database metrics to aid in monitoring of complex software system.  QueryPro provides monitoring at the database level via performance and usages stats, as well as the application level by providing query collection and analysis..
 
-Usage
------
+Installation
+------------
 
+It's important to run QueryPro on a new server instance, whether in an existing network or a new one.  This can be done with any cloud service i.e. DigitalOcean, AWS, etc.  QueryPro sets up custom firewall rules and requires specific ports, which may interfere with existing services and have broad security implications for an existing server setup.
+
+First check if an existing bash install script exists for your distribution i.e. ```ubuntu/14.04/install.sh```.  WARNING: The install scripts are still experimental, will not work as expected yet 
+
+If an install script exists, simply SSH into the server instance, pull the repo, set credentials (see below), and install with sudo
+```
+cd /opt && git clone https://github.com/jessecascio/querypro.git
+vi /opt/querypro/cred-config.env
+sudo /opt/querypro/ubuntu/14.04/install.sh
+```
+
+Once installation is complete all the Docker containers will be up and running and can be verified with
+```
+sudo docker ps
+```
+
+To install manually simply:
+
+Update the OS i.e. ```sudo apt-get update```
 Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
-
 Install the latest version of [Docker Compose](https://docs.docker.com/compose/install/)
+Install git
 
-Set desired default configurations in ```config.env```
+Clone the QueryPro repo
+```
+cd /opt && git clone https://github.com/jessecascio/querypro.git
+```
+
+Set desired default configurations in ```cred-config.env```
 
 Set credentials for UI
 ```
@@ -38,3 +62,10 @@ Access UI via browser with servier IP
 ```
 XXX.XXX.XXX.XXX
 ```
+
+Finally, as a security measure, update firewall settings to only allow access to ports: 80, 8080, 4444
+
+Usage
+------
+
+Once the 
