@@ -4,6 +4,8 @@ set -m
 
 # DO NOT USE THIS YET (7/24/2015)
 
+# set timezone ???
+
 apt-get autoclean 
 apt-get update
 apt-get install -y ufw git

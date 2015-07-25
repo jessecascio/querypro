@@ -14,6 +14,8 @@ queryprodata:
         - "25826:25826/udp"
 queryprofrontend:
     image: jessecascio/querypro-frontend
+    env_file:
+        - ./data-config.env
     expose:
         - "80"
     ports:
