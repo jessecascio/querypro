@@ -8,11 +8,11 @@ Installation
 
 It's important to run QueryPro on a new server instance, whether in an existing network or a new one.  This can be done with any cloud service i.e. DigitalOcean, AWS, etc.  QueryPro sets up custom firewall rules and requires specific ports, which may interfere with existing services and have broad security implications for an existing server setup.
 
-**DISCLAIMER:** QueryPro is still in the experimental phase.  Using the public source code, somebody could reverse engineer the code and gain access to data.  It is very IMPORTANT to only run / install QueryPro on a restricted server that is not open to the world until a more stable release.
+**DISCLAIMER:** *QueryPro is still in the experimental phase.  Using the public source code, somebody could reverse engineer the code and gain access to data.  It is very IMPORTANT to only run / install QueryPro on a restricted server that is not open to the world until a more stable release.*
 
 First check if an existing bash install script exists for your distribution i.e. ```install/ubuntu/14.04/install.sh```.  
 
-**WARNING:** The install scripts are still experimental, they may not work as expected yet.
+**WARNING:** *The install scripts are still experimental, they may not work as expected yet.*
 
 If an install script exists, simply SSH into the server instance, pull the repo, set credentials (see below), and install with sudo
 ```
