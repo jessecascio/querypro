@@ -30,9 +30,9 @@ sudo docker ps
 4. Install git
 
 5. Clone the QueryPro repo
-```
-cd /opt && git clone https://github.com/jessecascio/querypro.git
-```
+   ```  
+   cd /opt && git clone https://github.com/jessecascio/querypro.git
+   ```  
 
 6. Set desired default configurations in ```cred-config.env```
 
