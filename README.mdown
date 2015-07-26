@@ -18,7 +18,7 @@ If an install script exists, simply SSH into the server instance, pull the repo,
 ```
 cd /opt && git clone https://github.com/jessecascio/querypro.git
 vi /opt/querypro/cred-config.env
-sudo /opt/querypro/ubuntu/14.04/install.sh
+sudo /opt/querypro/install/ubuntu/14.04/install.sh
 ```
 
 Once installation is complete all the Docker containers will be up and running and can be verified with
