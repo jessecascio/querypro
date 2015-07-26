@@ -48,22 +48,22 @@ sudo docker ps
    DATA_PASS=querypro
    ```  
 
-Set timezone for time series grouping
-```
-TIMEZONE=PST
-```
+   Set timezone for time series grouping  
+   ```  
+   TIMEZONE=PST
+   ```  
 
 7. Start the QueryPro containers as daemons
-```
-sudo docker-compose up -d
-```
+   ```  
+   sudo docker-compose up -d
+   ```  
 
-Access UI via browser with servier IP
-```
-XXX.XXX.XXX.XXX
-```
+8. Verify UI via browser with server IP
+   ```  
+   XXX.XXX.XXX.XXX
+   ```  
 
-Finally, as a security measure, update firewall settings to only allow access to ports: 80, 8080, 4444
+9. Finally, as a security measure, update firewall settings to only allow access to ports: 80, 8080, 4444
 
 Usage
 ------
