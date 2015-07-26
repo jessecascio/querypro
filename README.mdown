@@ -12,7 +12,7 @@ It's important to run QueryPro on a new server instance, whether in an existing 
 
 First check if an existing bash install script exists for your distribution i.e. ```install/ubuntu/14.04/install.sh```.  
 
-**WARNING:** The install scripts are still experimental, will not work as expected yet 
+**WARNING:** The install scripts are still experimental, they may not work as expected yet.
 
 If an install script exists, simply SSH into the server instance, pull the repo, set credentials (see below), and install with sudo
 ```
