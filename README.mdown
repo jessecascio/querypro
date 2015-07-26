@@ -29,8 +29,11 @@ sudo docker ps
 ##### To install manually simply:
 
 1. Update the OS i.e. ```sudo apt-get update```
+
 2. Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
+
 3. Install the latest version of [Docker Compose](https://docs.docker.com/compose/install/)
+
 4. Install git
 
 5. Clone the QueryPro repo
