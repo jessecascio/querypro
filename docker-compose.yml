@@ -22,6 +22,8 @@ queryprofrontend:
         - "80:80"
 queryprobackend:
     image: jessecascio/querypro-backend
+    env_file:
+        - ./cred-config.env
     expose:
         - "8080"
         - "8080:8080"
