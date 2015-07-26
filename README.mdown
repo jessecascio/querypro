@@ -24,20 +24,17 @@ sudo docker ps
 
 ##### To install manually simply:
 
-Update the OS i.e. ```sudo apt-get update```
+1. Update the OS i.e. ```sudo apt-get update```
+2. Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
+3. Install the latest version of [Docker Compose](https://docs.docker.com/compose/install/)
+4. Install git
 
-Install the latest version of [Docker](https://docs.docker.com/installation/ubuntulinux/)
-
-Install the latest version of [Docker Compose](https://docs.docker.com/compose/install/)
-
-Install git
-
-Clone the QueryPro repo
+5. Clone the QueryPro repo
 ```
 cd /opt && git clone https://github.com/jessecascio/querypro.git
 ```
 
-Set desired default configurations in ```cred-config.env```
+6. Set desired default configurations in ```cred-config.env```
 
 Set credentials for UI
 ```
@@ -56,7 +53,7 @@ Set timezone for time series grouping
 TIMEZONE=PST
 ```
 
-Start the QueryPro containers as daemons
+7. Start the QueryPro containers as daemons
 ```
 sudo docker-compose up -d
 ```
