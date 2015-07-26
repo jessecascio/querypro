@@ -20,14 +20,16 @@ chmod +x /usr/local/bin/docker-compose
 cd /opt && git clone https://github.com/jessecascio/querypro.git
 cd /opt/querypro && docker-compose up -d
 
+# set up firewall
 ufw enable
+
 ufw default deny incoming
 ufw default allow outgoing
 
+# can get server's ip address: echo `ifconfig eth0 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
 ufw allow 22/tcp
 ufw allow 80/tcp
-# only allow from specific servers
-ufw allow 4444/udp
+ufw allow 8080/tcp
+ufw allow 4444/udp # should only allow from application servers
 
-# test
 ufw reload
