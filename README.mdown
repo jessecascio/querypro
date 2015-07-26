@@ -75,7 +75,7 @@ sudo docker ps
 Usage
 ------
 
-Once the QueryPro has been installed it can be accessed via the IP address of the server is was installed on.  All data should be sent to QueryPro via the server IP address using UDP port 4444.  The UI can be accessed in the browser using the server's IP address.
+Once the QueryPro has been installed it can be accessed via the IP address of the server is was installed on.  All data should be sent to QueryPro via the server IP address using UDP port 4444.  The UI can be accessed in the browser using the server's IP.
 
 Communication with QueryPro should be done via one of the supported libraries as they follow the required data structure.
 
@@ -84,4 +84,4 @@ Communication with QueryPro should be done via one of the supported libraries as
 * [querypro-java](#)  - QueryPro Java Library (COMING SOON)
 * [querypro-python](#)  - QueryPro Python Library (COMING SOON)
 
-If a library is not available for your library, and you feel like contributing, please reach out and we will send over the expected data structure for QueryPro submissions.
+If a library is not available for your language, and you feel like contributing, please reach out and we will send over the expected data structure for QueryPro submissions so that a new library can be created or you can write custom code.
