@@ -36,17 +36,17 @@ cd /opt && git clone https://github.com/jessecascio/querypro.git
 
 6. Set desired default configurations in ```cred-config.env```
 
-Set credentials for UI
-```
-USER=querypro
-PASSWORD=querypro
-```
+   Set credentials for UI  
+   ```  
+   USER=querypro
+   PASSWORD=querypro
+   ```  
 
-Set credentials for database
-```
-DATA_USER=querypro
-DATA_PASS=querypro
-```
+   Set credentials for database  
+   ```  
+   DATA_USER=querypro
+   DATA_PASS=querypro
+   ```  
 
 Set timezone for time series grouping
 ```
