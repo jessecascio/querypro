@@ -10,7 +10,9 @@ It's important to run QueryPro on a new server instance, whether in an existing 
 
 **DISCLAIMER:** QueryPro is still in the experimental phase.  Using the public source code, somebody could reverse engineer the code and gain access to data.  It is very IMPORTANT to only run / install QueryPro on a restricted server that is not open to the world until a more stable release.
 
-First check if an existing bash install script exists for your distribution i.e. ```install/ubuntu/14.04/install.sh```.  **WARNING:** The install scripts are still experimental, will not work as expected yet 
+First check if an existing bash install script exists for your distribution i.e. ```install/ubuntu/14.04/install.sh```.  
+
+**WARNING:** The install scripts are still experimental, will not work as expected yet 
 
 If an install script exists, simply SSH into the server instance, pull the repo, set credentials (see below), and install with sudo
 ```
