@@ -10,13 +10,13 @@
 
 <h3>QueryPro Demo</h3>
 
-<p>QueryPro is a full featured database query analyzer.  When creating complex data driven software systems it becomes difficult to track exactly which queries are being ran when, and how applications, or components of the system, are effecting database server performance.  While many database servers have logs which can track query data, they are rarely run in production environments due to the performance overhead.  There are also paid enterprise solutions available, but they typically only monitor the server level and are not cost effictive for smaller organizations.  What is unique about QueryPro, is that QueryPro offers both server and application level moniotoring.  This allows for tracking both server performance and application thorough put allowing for in depth analysis of the performance relationship between a database server and various applications.</p>
+<p>QueryPro is a full featured database query analyzer. When creating complex data driven software systems it becomes difficult to track exactly which queries are being ran when, and how applications, or components of the system, are affecting database server performance. While many database servers have logs which can track query data, they are rarely run in production environments due to the performance overhead, and the paid enterprise solutions typically only monitor the server level and are not cost effective for smaller organizations. What is unique about QueryPro, is that QueryPro offers both server and application level monitoring. This allows for tracking both server performance and application throughput, allowing for in depth analysis of the performance relationship between a database server and various applications.</p>
 
 <br />
 
 <h4>How it Works</h4>
 
-<p>QueryPro is a collection of Docker containers, which work together to collect, aggregate, and display data on both server and application performance.  By defining the QueryPro architecture in Docker, installation is incredibly easy, simply install Docker on a server droplet and run the containers.  Once started, the containers will immediately begin collecting server data on predefined servers and start storing the data which will immediately be available via the droplet's IP address using the QueryPro UI.  To add application data, simply download one of the QueryPro libraries and embed a few lines of code within your application's ORM.  All QueryPro interactions are done via UDP (opposed to TCP), adding no measuarable overhead**.  There is no limit on the number of applications, which can be unique software systems or distinct components of a single system.</p>
+<p>QueryPro is a collection of Docker containers, which work together to collect, aggregate, and display data on both server and application performance. By defining the QueryPro architecture in Docker, installation is incredibly easy, simply install Docker on a server droplet and run the containers. Once started, the containers will immediately begin collecting server data on predefined servers and start storing the data which will immediately be available using the QueryPro UI. To add application data, simply download one of the QueryPro libraries and embed a few lines of code within your application's ORM. All QueryPro interactions are done via UDP (opposed to TCP), adding no measurable overhead** to existing code bases. There is no limit on the number of applications, which can be unique software systems or distinct components of a single system.</p>
 
 <br />
 
@@ -24,7 +24,7 @@
 <ul>
     <li><strong>Application Monitoring</strong> - See all stats per application (drop down top right)</li>
     <li><strong>Query Frequency</strong> - Monitor how many queries are being ran per hour/day and what are the slowest query times for that period</li>
-    <li><strong>Query Distribution</strong> - See a break down of CRUD queries per day</li>
+    <li><strong>Query Distribution</strong> - See a breakdown of CRUD queries per day</li>
     <li><strong>Slow Queries</strong> - List the ten slowest queries per day for the last week</li>
 </ul>
 
