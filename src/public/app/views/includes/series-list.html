@@ -1,0 +1,16 @@
+<!-- application drop down -->
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-if="series.length">
+    {{globals.application}}  <i class="fa fa-caret-down"></i>
+</a>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-if="!series.length">
+    No Application Data
+</a>
+
+<ul class="dropdown-menu dropdown-user" ng-if="series.length">
+    <li ng-repeat="application in series">
+        <a href="#" ng-click="seriesChange(application)">
+            <i ng-if="$index == 111" class="fa fa-check-circle-o fa-fw"></i> {{application}}
+        </a>
+    </li>
+</ul>

@@ -1,0 +1,2 @@
+
+- query frequency - most frequently ran queries and their average execution times

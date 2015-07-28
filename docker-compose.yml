@@ -1,29 +1,30 @@
 queryprodata:
     image: jessecascio/querypro-data
     env_file:
-        - ./cred-config.env
+        - ./config.env
     expose:
-        - "8083"
         - "8086"
         - "4444"
         - "25826"
     ports:
-        - "8083:8083"
         - "8086:8086"
         - "4444:4444/udp"
         - "25826:25826/udp"
 queryprofrontend:
     image: jessecascio/querypro-frontend
     env_file:
-        - ./cred-config.env
+        - ./config.env
     expose:
         - "80"
     ports:
         - "80:80"
+    links:
+        - queryprodata
+        - queryprobackend
 queryprobackend:
     image: jessecascio/querypro-backend
     env_file:
-        - ./cred-config.env
+        - ./config.env
     expose:
         - "8080"
         - "8080:8080"

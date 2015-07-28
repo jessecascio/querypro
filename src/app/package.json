@@ -1,0 +1,11 @@
+{
+	"name": "querypro",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"express": "4.13.1",
+		"mongoose": "4.0.8",
+		"influx": "3.4.0",
+		"connect": "3.4.0"
+	}
+}
