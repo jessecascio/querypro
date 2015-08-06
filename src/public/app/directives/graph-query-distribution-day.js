@@ -25,11 +25,13 @@
                         return;
                     }
 
+                    var lookback = 7;
+
                     // @todo Can we limit curl calls ???
-                    var select = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "select"=1 group by time(1d) limit 7');
-                    var update = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "update"=1 group by time(1d) limit 7');
-                    var insert = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "insert"=1 group by time(1d) limit 7');
-                    var del    = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "delete"=1 group by time(1d) limit 7');
+                    var select = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "select"=1 group by time(1d) fill(0) limit '+lookback);
+                    var update = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "update"=1 group by time(1d) fill(0) limit '+lookback);
+                    var insert = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "insert"=1 group by time(1d) fill(0) limit '+lookback);
+                    var del    = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "delete"=1 group by time(1d) fill(0) limit '+lookback);
                     
                     // var urlD = queryproUrl + encodeURIComponent('select max(duration) from "'+scope.globals.application+'" group by time(1h) limit 24');
 
@@ -91,13 +93,14 @@
                             }
                         }
                         
-                        render(dist, ColumnChart);
+                        render(dist, lookback, ColumnChart);
                     });
                 }
 
-                function render(distribution, ColumnChart) {
+                function render(distribution, lookback, ColumnChart) {
                     
                     var data = new Array();
+                    var cnt  = 0; // verify iterations i.e. when no data for today for one of the metrics
 
                     for (var t in distribution) {
                         var date = new Date(Number(t));
@@ -108,6 +111,12 @@
                             typeof distribution[t]['delete'] != "undefined" ? distribution[t]['delete'] : 0,
                             typeof distribution[t]['insert'] != "undefined" ? distribution[t]['insert'] : 0,
                         ]);
+
+                        cnt++;
+
+                        if (cnt > (lookback-1)) {
+                            break;
+                        }
                     }
                     
                     ColumnChart.setContainer('graph-query-distribution-day');
