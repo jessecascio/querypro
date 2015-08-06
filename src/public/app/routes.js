@@ -18,8 +18,8 @@
 		});
 
 		// <base>/#/list
-		$routeProvider.when("/query/slow", {
-			templateUrl: "/app/views/query-slow.html"
+		$routeProvider.when("/query/latency", {
+			templateUrl: "/app/views/query-latency.html"
 			// controller: "myController"
 		});
 

@@ -55,8 +55,8 @@ var influxRollupSlowQueries = function() {
 
     		var series = seriesList[i];
 
-    		// grab top 10 slowest queries per hour
-    		var q = "SELECT top(duration,10) from "+series+" group by time(1h) limit 240";
+    		// grab top 5 slowest queries per hour, for the day
+    		var q = "SELECT top(duration,5) from "+series+" group by time(1h) limit 120";
 
     		client.query(q, function (err, results) {
     		
@@ -145,8 +145,8 @@ var influxRollupSlowQueries = function() {
 
     		var series = seriesList[i];
 
-    		// grab top 10 slowest queries per day
-    		var q = "SELECT top(duration,10) from "+series+" group by time(1d) limit 310";
+    		// grab top 5 slowest queries per day, for 31 days
+    		var q = "SELECT top(duration,5) from "+series+" group by time(1d) limit 155";
 
     		client.query(q, function (err, results) {
     		
