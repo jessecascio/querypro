@@ -26,10 +26,10 @@
                     }
 
                     // @todo Can we limit curl calls ???
-                    var select = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "select"=1 group by time(1d) limit 14');
-                    var update = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "update"=1 group by time(1d) limit 14');
-                    var insert = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "insert"=1 group by time(1d) limit 14');
-                    var del    = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "delete"=1 group by time(1d) limit 14');
+                    var select = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "select"=1 group by time(1d) limit 7');
+                    var update = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "update"=1 group by time(1d) limit 7');
+                    var insert = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "insert"=1 group by time(1d) limit 7');
+                    var del    = queryproUrl + encodeURIComponent('select count(hash) from "'+scope.globals.application+'" where "delete"=1 group by time(1d) limit 7');
                     
                     // var urlD = queryproUrl + encodeURIComponent('select max(duration) from "'+scope.globals.application+'" group by time(1h) limit 24');
 
@@ -102,7 +102,7 @@
                     for (var t in distribution) {
                         var date = new Date(Number(t));
                         data.unshift([
-                            date.getMonth() + "/" + date.getDate(),
+                            (date.getMonth()+1) + "/" + date.getDate(),
                             typeof distribution[t]['select'] != "undefined" ? distribution[t]['select'] : 0,
                             typeof distribution[t]['update'] != "undefined" ? distribution[t]['update'] : 0,
                             typeof distribution[t]['delete'] != "undefined" ? distribution[t]['delete'] : 0,
