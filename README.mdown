@@ -1,7 +1,7 @@
 QueryPro 
 ===========
 
-[QueryPro](http://jessesnet.com/portfolio) is a multi tiered system for gathering and analyzing various database metrics to aid in monitoring of complex software system.  QueryPro provides monitoring at the database level via performance and usages stats, as well as the application level by providing query collection and analysis.
+[QueryPro](http://jessesnet.com/portfolio/query-pro) is a multi tiered system for gathering and analyzing various database metrics to aid in monitoring of complex software system.  QueryPro provides monitoring at the database level via performance and usages stats, as well as the application level by providing query collection and analysis.
 
 Installation
 ------------
